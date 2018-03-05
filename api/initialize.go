@@ -30,11 +30,6 @@ func (a *App) Initialize(user, password, dbname string) {
 	a.initializeRoutes()
 }
 
-func (a *App) initializeRoutes() {
-	//a.Router.HandleFunc("/users", getUsers).Methods("GET")
-	a.Router.HandleFunc("/user", a.CreateUser).Methods("POST")
-}
-
 func (a *App) Run(addr string) {
 	fmt.Println("GoRestExample starting on :: ", a.GetPort())
 	err := http.ListenAndServe(addr, a.Router)
