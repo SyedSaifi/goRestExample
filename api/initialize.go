@@ -31,12 +31,12 @@ func (a *App) Initialize(user, password, dbname string) {
 }
 
 func (a *App) Run(addr string) {
-	fmt.Println("GoRestExample starting on :: ", a.GetPort())
+	fmt.Println("GoRest Application is starting on :: ", a.GetPort())
 	err := http.ListenAndServe(addr, a.Router)
 	if err != nil {
 		log.Fatal(err)
 	} else {
-		fmt.Printf("GORestExample running on port %s :: ", a.Port)
+		fmt.Printf("GoRest Application running on port %s :: ", a.Port)
 	}
 }
 

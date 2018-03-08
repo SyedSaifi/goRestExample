@@ -1,0 +1,17 @@
+{
+    "name": "gorest",
+    "version": "1.0.0",
+    "repository": "https://github.com/SyedSaifi/goRestExample.git",
+    "author": "Syed Saifi",
+    "license": "MIT",
+    "scripts": {
+      "start": "go run gorest.go",
+      "build": "go build",
+      "dev": "go run gorest.go",
+      "prod": "rm -f gorest.zip && go build && env GOOS=windows GOARCH=amd64 go build && zip -r gorest.zip gorest.exe gorest/"
+    },
+    "dependencies": {
+      "@angular/cli": "^1.4.9",
+      "concurrently": "^3.5.0"
+    }
+  }
